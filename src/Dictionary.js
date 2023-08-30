@@ -6,6 +6,11 @@ export default function Dictionary() {
 	const [keyword, setKeyword] = useState("");
 	const [apiResult, setApiResult] = useState(null);
 
+	window.onload = function search(e) {
+		let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/happy`;
+		axios.get(apiUrl).then(handleResponse);
+	};
+
 	function handleResponse(response) {
 		setApiResult(response.data[0]);
 	}

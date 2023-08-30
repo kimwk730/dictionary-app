@@ -3,7 +3,6 @@ import Meaning from "./Meaning";
 
 export default function Result(props) {
 	if (props.apiResult) {
-		console.log(props.apiResult.phonetics);
 		return (
 			<div className="result">
 				<h2>{props.apiResult.word}</h2>
@@ -11,14 +10,10 @@ export default function Result(props) {
 					return (
 						<div key={index}>
 							<div className="phonetic">
-								<a
-									href={props.apiResult.phonetics[0].audio}
-									target="_blank"
-									rel="noreferrer"
-								>
+								<a href={phonetic.audio} target="_blank" rel="noreferrer">
 									Listen
 								</a>
-								{props.apiResult.phonetics[0].text}
+								{phonetic.text}
 							</div>
 						</div>
 					);
