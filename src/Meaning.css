@@ -1,0 +1,12 @@
+.meaning .def {
+	color: var(--skyblue);
+}
+.meaning ul {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+.meaning li {
+	list-style: none;
+	display: inline-block;
+}

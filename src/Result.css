@@ -1,0 +1,12 @@
+.result .word {
+	margin: 20px auto;
+	padding: 40px;
+	border: 10px solid var(--grey);
+	border-radius: 4px;
+	color: var(--navy);
+	font-weight: 600;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.result .word span {
+	padding-left: 30px;
+}

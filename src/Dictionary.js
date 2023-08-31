@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Result from "./Result";
 import Photos from "./Photos";
 import axios from "axios";
+import "./Dictionary.css";
 
 export default function Dictionary() {
 	const [keyword, setKeyword] = useState("");
@@ -41,12 +42,30 @@ export default function Dictionary() {
 
 	return (
 		<div className="dictionary">
-			<form onSubmit={search} className="p-5">
-				<input type="search" onChange={handleKeyword} />
-				<input type="submit" value="search" />
-			</form>
+			<header>
+				<h1>Dictionary</h1>
+				<form onSubmit={search}>
+					<input
+						type="search"
+						onChange={handleKeyword}
+						placeholder="🔎 Let's find your word"
+					/>
+				</form>
+			</header>
 			<Result apiResult={apiResult} />
 			<Photos photos={photos} />
+			<footer>
+				<p>
+					Open source page created by{" "}
+					<a
+						href="https://github.com/kimwk730/dictionary-app"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Won Kim
+					</a>
+				</p>
+			</footer>
 		</div>
 	);
 }

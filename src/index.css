@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+
+:root {
+	--white: #ececec;
+	--skyblue: #dbf7f1;
+	--grey: #385170;
+	--navy: #142d4c;
+}
+
+body {
+	font-family: "Play", sans-serif;
+	background: var(--skyblue);
+}
+.App {
+	margin: 60px auto;
+	max-width: 800px;
+	text-align: center;
+	color: var(--white);
+}
