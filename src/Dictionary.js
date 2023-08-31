@@ -7,18 +7,18 @@ export default function Dictionary() {
 	const [apiResult, setApiResult] = useState(null);
 
 	window.onload = function search(e) {
-		let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/happy`;
+		let apiKey = "0b46of5c21902dba4ed6583ft2aa7e31";
+		let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=happy&key=${apiKey}`;
 		axios.get(apiUrl).then(handleResponse);
 	};
 
 	function handleResponse(response) {
-		console.log(response.data);
-		console.log(response.data[0]);
-		setApiResult(response.data[0]);
+		setApiResult(response.data);
 	}
 	function search(e) {
 		e.preventDefault();
-		let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+		let apiKey = "0b46of5c21902dba4ed6583ft2aa7e31";
+		let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
 		axios.get(apiUrl).then(handleResponse);
 	}
 
